@@ -1,0 +1,28 @@
+Create Database: Creates a new database called pizzhut.
+
+Select Database: Switches to the pizzhut database.
+
+Retrieve Data: Attempts to fetch all records from the orders table (assumes it exists).
+
+Create Orders Table: Defines an orders table with order_id, order_date, and order_time, with order_id as the primary key.
+
+Create Order Details Table: Defines an order_details table with order_details_id, order_id, pizza_id, and quantity, with order_details_id as the primary key.
+
+This setup involves creating and using a database, defining tables for orders and order details, and specifying primary keys for data integrity.
+
+
+create database pizzhut;
+use pizzahut;
+select * from pizzhut.orders;
+create table orders(
+order_id int not null, 
+order_date date not null,
+order_time time not null,
+primary key(order_id));
+
+Create table order_details(
+order_details_id int not null, 
+order_id int not null, 
+pizza_id text not null,
+quantity int not null,
+primary key(order_details_id))
